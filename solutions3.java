@@ -4,7 +4,7 @@
 /*
 -	Calculator.java
 */
-public class Calculator extends java.awt.Frame
+class Calculator extends java.awt.Frame
 /* implements java.awt.event.ActionListener */
 {
 	/*
