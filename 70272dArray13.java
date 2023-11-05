@@ -3,7 +3,9 @@
 */
 class Test
 {
-    public static boolean matrix(int[][] matrix, double threshold)
+    // A sparse matrix is a matrix in which most of the elements are zero. 
+
+    public static boolean matrix(int[][] matrix, double range)
     {
         int zeroElements = 0;
         int totalElements = matrix.length * matrix[0].length;
@@ -18,7 +20,7 @@ class Test
                 
         double zeroPercentage = (double) zeroElements / totalElements;
 
-        return zeroPercentage >= threshold;
+        return zeroPercentage >= range;
     }
     public static void main(String[] args)
     {
@@ -27,12 +29,14 @@ class Test
             {0, 5, 0, 0},
             {0, 0, 0, 0}
         };
+        double range = 0.9;
 
-        double threshold = 0.9;
-
-        if (matrix(matrix, threshold)) {
+        if (matrix(matrix, range))
+        {
             System.out.println("The matrix is sparse.");
-        } else {
+        }
+        else
+        {
             System.out.println("The matrix is not sparse.");
         }
     }
